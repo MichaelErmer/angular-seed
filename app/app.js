@@ -12,7 +12,7 @@ constant('feathersSettings', {
   endpointUrl: 'http://yourapi.url',
   useSocket: true
 }).
-config(['$locationProvider', '$routeProvider', '$feathersProvider', 'feathersSettings', function($locationProvider, $routeProvider,$feathersProvider, feathersSettings, ) {
+config(['$locationProvider', '$routeProvider', '$feathersProvider', 'feathersSettings', function($locationProvider, $routeProvider,$feathersProvider, feathersSettings) {
   $feathersProvider.setEndpoint(feathersSettings.endpointUrl)
     
   // true is default; set to false if you like to use REST 
