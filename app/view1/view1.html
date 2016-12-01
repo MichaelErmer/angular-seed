@@ -1,1 +1,35 @@
 <p>This is the partial for view 1.</p>
+<div>
+	<h1>Create Message</h1>
+	<form ng-submit="addMessage()">
+		<input type="text" name="text" ng-model="message.text">
+		<button type="submit">Create Message</button>
+	</form>
+</div>
+<div>
+	<h1>List Messages</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Text</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="message in messages">
+				<td>{{message.id}}</td>
+				<td>{{message.text}}</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>
+					Total:
+				</td>
+				<td>
+					{{totalMessagesCount}}
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+</div>
